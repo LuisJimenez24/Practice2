@@ -2,11 +2,7 @@
     Private _personId As Integer
     Private _name As String
 
-    Public Property per As Integer
-        Set(value As Integer)
-            Me._personId = value
-
-        End Set
+    Public ReadOnly Property per As Integer
         Get
             Return _personId
         End Get
@@ -22,8 +18,7 @@
         End Get
     End Property
 
-    Public Sub New(ByVal name As String, ByVal prsnid As Integer)
-        Me._name = name
+    Public Sub New(ByVal prsnid As Integer)
         Me._name = prsnid
     End Sub
 
