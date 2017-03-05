@@ -27,26 +27,29 @@ Partial Class frmMain
         Me.delBttn = New System.Windows.Forms.Button()
         Me.modBttn = New System.Windows.Forms.Button()
         Me.addBttn = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.txtBox2 = New System.Windows.Forms.TextBox()
-        Me.txtBox1 = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dbpathBttn = New System.Windows.Forms.Button()
         Me.connBttn = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.pnl = New System.Windows.Forms.Panel()
+        Me.txtDBpath = New System.Windows.Forms.TextBox()
+        Me.dbpathDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.PeopleList = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
+        Me.pnl.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.PeopleList)
         Me.GroupBox1.Controls.Add(Me.clearBttn)
         Me.GroupBox1.Controls.Add(Me.delBttn)
         Me.GroupBox1.Controls.Add(Me.modBttn)
         Me.GroupBox1.Controls.Add(Me.addBttn)
-        Me.GroupBox1.Controls.Add(Me.ListView1)
-        Me.GroupBox1.Controls.Add(Me.txtBox2)
-        Me.GroupBox1.Controls.Add(Me.txtBox1)
+        Me.GroupBox1.Controls.Add(Me.txtName)
+        Me.GroupBox1.Controls.Add(Me.txtID)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(23, 23)
@@ -92,27 +95,19 @@ Partial Class frmMain
         Me.addBttn.Text = "Add"
         Me.addBttn.UseVisualStyleBackColor = True
         '
-        'ListView1
+        'txtName
         '
-        Me.ListView1.Location = New System.Drawing.Point(20, 23)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(106, 127)
-        Me.ListView1.TabIndex = 4
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.txtName.Location = New System.Drawing.Point(268, 72)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(155, 20)
+        Me.txtName.TabIndex = 3
         '
-        'txtBox2
+        'txtID
         '
-        Me.txtBox2.Location = New System.Drawing.Point(268, 72)
-        Me.txtBox2.Name = "txtBox2"
-        Me.txtBox2.Size = New System.Drawing.Size(155, 20)
-        Me.txtBox2.TabIndex = 3
-        '
-        'txtBox1
-        '
-        Me.txtBox1.Location = New System.Drawing.Point(268, 39)
-        Me.txtBox1.Name = "txtBox1"
-        Me.txtBox1.Size = New System.Drawing.Size(155, 20)
-        Me.txtBox1.TabIndex = 2
+        Me.txtID.Location = New System.Drawing.Point(268, 39)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(155, 20)
+        Me.txtID.TabIndex = 2
         '
         'Label2
         '
@@ -136,7 +131,7 @@ Partial Class frmMain
         '
         'dbpathBttn
         '
-        Me.dbpathBttn.Location = New System.Drawing.Point(43, 223)
+        Me.dbpathBttn.Location = New System.Drawing.Point(43, 209)
         Me.dbpathBttn.Name = "dbpathBttn"
         Me.dbpathBttn.Size = New System.Drawing.Size(75, 23)
         Me.dbpathBttn.TabIndex = 1
@@ -152,15 +147,39 @@ Partial Class frmMain
         Me.connBttn.Text = "Connect"
         Me.connBttn.UseVisualStyleBackColor = True
         '
-        'OpenFileDialog1
+        'pnl
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.pnl.Controls.Add(Me.txtDBpath)
+        Me.pnl.Location = New System.Drawing.Point(168, 209)
+        Me.pnl.Name = "pnl"
+        Me.pnl.Size = New System.Drawing.Size(317, 94)
+        Me.pnl.TabIndex = 3
+        '
+        'txtDBpath
+        '
+        Me.txtDBpath.Location = New System.Drawing.Point(0, 36)
+        Me.txtDBpath.Name = "txtDBpath"
+        Me.txtDBpath.Size = New System.Drawing.Size(317, 20)
+        Me.txtDBpath.TabIndex = 0
+        '
+        'dbpathDialog
+        '
+        Me.dbpathDialog.FileName = "OpenFileDialog1"
+        '
+        'PeopleList
+        '
+        Me.PeopleList.FormattingEnabled = True
+        Me.PeopleList.Location = New System.Drawing.Point(6, 23)
+        Me.PeopleList.Name = "PeopleList"
+        Me.PeopleList.Size = New System.Drawing.Size(102, 121)
+        Me.PeopleList.TabIndex = 9
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(528, 325)
+        Me.Controls.Add(Me.pnl)
         Me.Controls.Add(Me.connBttn)
         Me.Controls.Add(Me.dbpathBttn)
         Me.Controls.Add(Me.GroupBox1)
@@ -168,21 +187,25 @@ Partial Class frmMain
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.pnl.ResumeLayout(False)
+        Me.pnl.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents txtBox2 As TextBox
-    Friend WithEvents txtBox1 As TextBox
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents txtID As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents dbpathBttn As Button
     Friend WithEvents connBttn As Button
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents clearBttn As Button
     Friend WithEvents delBttn As Button
     Friend WithEvents modBttn As Button
     Friend WithEvents addBttn As Button
+    Friend WithEvents pnl As Panel
+    Friend WithEvents txtDBpath As TextBox
+    Friend WithEvents dbpathDialog As OpenFileDialog
+    Friend WithEvents PeopleList As ListBox
 End Class

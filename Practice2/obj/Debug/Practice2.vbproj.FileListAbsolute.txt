@@ -1,1 +1,12 @@
 c:\users\05720443\documents\visual studio 2015\Projects\Practice2\Practice2\bin\Debug\Practice2.exe.config
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\bin\Debug\Practice2.exe.config
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\bin\Debug\Practice2.exe
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\bin\Debug\Practice2.pdb
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\bin\Debug\Practice2.xml
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\obj\Debug\Practice2.vbprojResolveAssemblyReference.cache
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\obj\Debug\Practice2.frmMain.resources
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\obj\Debug\Practice2.Resources.resources
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\obj\Debug\Practice2.vbproj.GenerateResource.Cache
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\obj\Debug\Practice2.exe
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\obj\Debug\Practice2.xml
+C:\Users\Rober\Documents\Visual Studio 2015\Projects\Practice2\Practice2\obj\Debug\Practice2.pdb

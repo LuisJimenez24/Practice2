@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class DBBroker
-    Public Shared DBPath As String = "C:\people.accdb"
+    Public Shared DBPath As String
     Private Shared ConnectionString As String = “Provider=Microsoft.ACE.OLEDB.12.0; Data Source=“
     Private Shared _Connection As OleDbConnection
     Private Shared _Instance As DBBroker
@@ -9,12 +9,12 @@ Public Class DBBroker
         DBBroker._Connection = New OleDbConnection(ConnectionString & DBPath)
         DBBroker._Connection.Open()
     End Sub
-    Public ReadOnly Property getInstance() As DBBroker
+    Public Shared ReadOnly Property getInstance() As DBBroker
         Get
             If DBBroker._Instance Is Nothing Then
-                Me._Instance = New DBBroker()
+                DBBroker._Instance = New DBBroker()
             End If
-            Return Me._Instance
+            Return DBBroker._Instance
         End Get
     End Property
 
@@ -22,6 +22,7 @@ Public Class DBBroker
         Dim com As New OleDbCommand(sql, _Connection)
         Return com.ExecuteReader()
     End Function
+
     Public Function change(ByVal sql As String) As Integer
         Dim com As New OleDbCommand(sql, _Connection)
         Return com.ExecuteNonQuery()
