@@ -1,4 +1,5 @@
 ﻿Public Class Person
+
     Private _personId As String
     Private _name As String
     Private DAO As DAOPerson = New DAOPerson

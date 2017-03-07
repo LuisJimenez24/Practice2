@@ -22,7 +22,9 @@ Partial Class frmMain
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PeopleList = New System.Windows.Forms.ListBox()
         Me.clearBttn = New System.Windows.Forms.Button()
         Me.delBttn = New System.Windows.Forms.Button()
         Me.modBttn = New System.Windows.Forms.Button()
@@ -36,7 +38,6 @@ Partial Class frmMain
         Me.pnl = New System.Windows.Forms.Panel()
         Me.txtDBpath = New System.Windows.Forms.TextBox()
         Me.dbpathDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.PeopleList = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
         Me.pnl.SuspendLayout()
         Me.SuspendLayout()
@@ -58,6 +59,14 @@ Partial Class frmMain
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "PERSONS"
+        '
+        'PeopleList
+        '
+        Me.PeopleList.FormattingEnabled = True
+        Me.PeopleList.Location = New System.Drawing.Point(6, 23)
+        Me.PeopleList.Name = "PeopleList"
+        Me.PeopleList.Size = New System.Drawing.Size(102, 121)
+        Me.PeopleList.TabIndex = 9
         '
         'clearBttn
         '
@@ -166,14 +175,6 @@ Partial Class frmMain
         '
         Me.dbpathDialog.FileName = "OpenFileDialog1"
         '
-        'PeopleList
-        '
-        Me.PeopleList.FormattingEnabled = True
-        Me.PeopleList.Location = New System.Drawing.Point(6, 23)
-        Me.PeopleList.Name = "PeopleList"
-        Me.PeopleList.Size = New System.Drawing.Size(102, 121)
-        Me.PeopleList.TabIndex = 9
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -183,8 +184,9 @@ Partial Class frmMain
         Me.Controls.Add(Me.connBttn)
         Me.Controls.Add(Me.dbpathBttn)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
-        Me.Text = "Form1"
+        Me.Text = "Practice 2"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.pnl.ResumeLayout(False)
